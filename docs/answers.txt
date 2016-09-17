@@ -1,0 +1,44 @@
+Question 9(a): How many commits have been done to the repository by the end of step 8?
+Answer: Three(03) commits. 
+
+Question 9(b):When was the file .gitignore modified last?
+Answer: Javier committed d24bbc5 on Thu Sep 15 10:28:43 2016 -0400
+
+Question 9(c):How many times was each of the files inside the src folder modified?
+Answer: git log --follow src
+	
+        commit c42f32e39f04ac47d666a435ac3370c8425bca92
+	Author: Javier <Javier@RicardoLaptop>
+	Date:   Thu Sep 15 13:36:30 2016 -0400
+	
+    	Adding BasicWeapon to support attribute reuse.
+
+        Now Sword inherits from it and further weapons must do it as well.
+
+        commit 871bf6a4d6a7f525aeca876e2ab445390633c130
+        Author: Javier <Javier@RicardoLaptop>
+        Date:   Thu Sep 15 10:27:32 2016 -0400
+ 
+        Role game for Git Assignment.
+  
+        This framework inclused the interdace Sword, the RoleGame class with
+        a partial implementation of the game, and one weapon: Sword.
+
+Question 9(d):What is the difference between git log and git status?
+Answer: git log is used for showing the all committing history of the currently 
+        active branch whereas git status shows the modified files in the working 
+        directory, staged for your next commit.
+
+Question 9(e):What command would you use to see the commits where "RoleGame.java"
+              was one of the commited files?
+Answer: git log --RoleGame.java --follow src
+                     or
+        git log --pretty=format:"%cn committed %h on %cd" 
+
+Question 9(f):What command would you use to see the commits whose commit message
+              contains the word "file"?
+Answer: git log --grep="file"
+
+Question 9(g):What command would you use to see the commits made by "Alice" between
+              09/01/2016 and 09/16/2016? 
+Answer: git log --after="2014-9-1" --before="2016-9-16"
